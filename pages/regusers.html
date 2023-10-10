@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Perros en adopcion en la ciudad de mexico - apoyo economico o material a refugios de perros">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script defer src="../funciones.js"></script>
+
+    <title>Lomitos Felices - Registro de Usuarios - Adopcion de perros</title>
+</head>
+
+<body>
+    <div class="main__container">
+
+        <header class="header">
+
+            <nav class="header__nav">
+
+                <div class="header__logo">
+                    <img src="../img/logoblanco.png" class="">
+                </div>
+                <div class="header__nav-container">
+
+                    <ul class="header__nav-ul">
+                        <li class="header__nav-li"><a href="./index.html" class="header__nav-a">Home</a></li>
+                        <li class="header__nav-li"><a href="./adopcionmenu.html" class="header__nav-a">Adopcion</a></li>
+                        <li class="header__nav-li"><a href="./porqueadoptar.html" class="header__nav-a">¿Porque
+                                Adoptar?</a></li>
+                        <li class="header__nav-li"><a href="./refugiomenu.html" class="header__nav-a">Quiero
+                                Ayudar</a></li>
+                        <li class="header__nav-li" id="registrarme"><a href="./regusers.html"
+                                class="header__nav-a">Registarme</a>
+                        </li>
+                        <li class="header__nav-li" id="registrarmeRe"><a href="./regrefugio.html" class="header__nav-a">Registarar mi
+                                refugio</a></li>
+                        <li class="header__nav-li"><a href="./sobrenosotros.html" class="header__nav-a">Sobre
+                                Nosotros</a></li>
+                    </ul>
+                    <div class="header__nav-iconmenu">
+                        <img src="./img/nav/icono_menu.png" alt="icono menu de navegacion">
+                        </label>
+                    </div>
+                </div>
+                <div class="usermenu" id="usermenu">
+
+
+                </div>
+            </nav>
+            <div class="header__image">
+                <img src="../content_edit/img/header/Headers.png"
+                    alt="Imagen de Perro en cabecera de pagina con leyenda adopta no compres"
+                    class="header__image-desktop">
+                <img src="../content_edit/img/header/header_mobile.png"
+                    alt="Imagen de Perro en cabecera de pagina con leyenda adopta no compres"
+                    class="header__image-mobile">
+            </div>
+        </header>
+
+        <div class="header">
+            <img src="../img/header-desktop.jpg" alt="" class="header_img-desktop">
+            <img src="../img/header-mobile.jpg" alt="" class="header_img-mobile">
+        </div>
+
+    </div>
+    <div class="content__container">
+        <main>
+            <div class="section__reguser-texto">
+                <h1>Registro de Usuarios</h1>
+                <p class="user-p">Estamos encantados de que hayas decidido unirte a nuestra comunidad y brindarles una
+                    segunda oportunidad a estos maravillosos amigos de cuatro patas. Para comenzar el proceso de
+                    registro, necesitamos que nos proporciones algunos detalles. Por favor, completa el siguiente
+                    formulario con la información requerida:</p>
+            </div>
+            <div class="background">
+                <h2 class="h2form">Complete el Formulario de registro</h2>
+                <div id="estado">
+                    <form id="section__form-container" class="section__form-container">
+
+                        <div class="container-derecho">
+                            <h3>Información personal:</h3>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" class="inputtext"
+                                placeholder=" Ingrese su nombre:"><br>
+
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" name="apellido" class="inputtext"
+                                placeholder=" Ingrese su apellido:"><br>
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" class="inputtext"
+                                placeholder=" Ingrese su email:"><br>
+
+                            <label for="dire">Ingrese su direccion:</label>
+                            <input type="text" id="dire" name="dire" class="inputtext"
+                                placeholder=" Ingrese su dirección:"><br>
+
+                            <label for="personas">Numero Exterior:</label>
+                            <input type="number" id="next" name="personas" class="inputtext"
+                                placeholder=" Numero Exterior:"><br>
+
+                            <label for="nombre-veterinario">Numero Interior:</label>
+                            <input type="number" id="nint" name="nombre-veterinario" class="inputtext"
+                                placeholder=" Numero Interior:"><br>
+
+                            <label for="celular">Celular:</label>
+                            <input type="number" id="celular" name="celular" class="inputtext"
+                                placeholder=" Ingrese su celuar:"><br>
+
+                            <label for="veterinaria">Veterinaria a la que lleva su mascota:</label>
+                            <input type="text" id="vetdog" name="veterinaria" class="inputtext"
+                                placeholder=" Veterinaria a la que lleva su mascota:"><br>
+                        </div>
+                        <div class="container-derecho">
+                            <h3>Información del usuario:</h3>
+                            <label for="direccion">Ingrese un nombre de usuario:</label>
+                            <input type="text" id="username" name="direccion" class="inputtext"
+                                placeholder="Ingrese su nombre de usuario:"><br>
+
+                            <label for="password">Contraseña:</label>
+                            <input type="password" id="password" name="codigo-postal" class="inputtext"><br>
+                            <label for="password2">Repita la Contraseña:</label>
+                            <input type="password" id="password2" name="codigo-postal" class="inputtext"><br>
+
+
+                            <div class="container-check">
+                                <input type="checkbox" id="checkbox">
+                                <label for="checkbox" class="check-label">Acepto los términos y
+                                    condiciones(Requerido)</label>
+                                <input type="checkbox" id="checkbox">
+                                <label for="checkbox" class="check-label">Quiero recibir notificaciones importantes de
+                                    Lomitos Felices</label>
+                            </div>
+                            <div id="alerta" style="color: rgb(47, 255, 0); font-size: 1.8rem;">
+
+                            </div>
+                            <button type="submit" class="btn" id="submit">
+                                <img src="../content_edit/img/icons/pata_btn.png" alt="">
+                                <h4>Registrar usuario</h4>
+                            </button>
+                            <div class="btn">
+                                <img src="../content_edit/img/icons/pata_btn.png" alt="">
+                                <h4>Borrar Formulario</h4>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="registrocompletado">
+
+                    <h3>El usuario se registro correctamente.</h3>
+                    <h4>Seras reedirigido a la pagina principal.</h4>
+                    <a href="../index.html"><button class="btn">INDEX</button></a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__logo">
+            <img src="../content_edit/img/footer/logo_footer.png" alt="Logo Lomitos Felices" class="footer__logo">
+        </div>
+        <div class="footer__redes-sociales">
+            <img src="../content_edit/img/footer/facebook.png"
+                alt="Icono para acceder a redes sociales de lomitos felices en Facebook" class="icons-social">
+            <img src="../content_edit/img/footer/instagram.png"
+                alt="Icono para acceder a redes sociales de lomitos felices en Instagram" class="icons-social">
+            <img src="../content_edit/img/footer/tw.png"
+                alt="Icono para acceder a redes sociales de lomitos felices en Twitter" class="icons-social">
+        </div>
+        <nav class="footer__menu">
+            <ul>
+                <li><a href="./adopcionmenu.html">Adopcion</a></li>
+                <li><a href="./porqueadoptar.html">¿Porque Adoptar?</a></li>
+                <li><a href="./refugiocard.html">Quiero Ayudar</a></li>
+                <li><a href="./regusers.html">Registarme</a></li>
+                <li><a href="./regrefugio.html">Registarar mi refugio</a></li>
+                <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="footer__legales">
+            Copyright © 2023 Lomitos Felices, Todos los derechos reservados.
+        </div>
+    </footer>
+    <script src="../js/Login/classeUsuario.js"></script>
+    <script src="../js/Login/autenticación.js"></script>
+    <script src="../js/Login/usermenu.js"></script>
+    <script src="../js/UsuariosControllers/registroUsuarios.js"></script>
+
+
+</body>
+
+</html>
