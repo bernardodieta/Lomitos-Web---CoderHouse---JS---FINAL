@@ -1,7 +1,5 @@
 
 const btn_donar = document.getElementById('donativo');
-// datosSS = JSON.parse(sessionStorage.getItem('idrefu'));
-// const listaRefugios = arrayRefugios;
 let islogin = JSON.parse(sessionStorage.getItem('status'))
 let modal = document.getElementById("ventanaModal");
 let boton = document.getElementById("abrirModal");
@@ -108,9 +106,6 @@ const donarMedicina = () => {
         })
     }
 }
-
-
-
 
 const donarDinero = () => {
     if (islogin === true) {

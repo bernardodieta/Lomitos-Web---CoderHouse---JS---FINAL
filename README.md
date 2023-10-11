@@ -1,21 +1,18 @@
 # lomitosapp-js-coderhouse
-Tercera Entrego de Curso JavaScript en CoderHouse.
+Entrega Final del Curso JavaScript en CoderHouse.
 
-La idea es reutilizar el proyecto final del curso anterior de desarrollo web y aplicarle todo lo aprendido hasta ahora en el curso de JavaScript.
-El sitio es un sitio para adopcion de perros y donaciones a refugios basicamente.
+Contenido Dinamico:
+Todas las tarjetas de los perros y refugios que aparecen en todas las paginas son cargadas dinamicamentes desde un archivo .json y mostradas en pantallas y para poder mostrar
+las nuevas que cargue el usuario registrado, estoy fusionando el array que extraigo del archivo .json con los datos que se guardaron en el sessionStorage a la hora de registrar un refugio o un perro.
+Como aun no tengo resuelto el tema de subir las imagenes, cuando hagan el registro de un refugio o un perro, automaticamente se van a vincular a su registro unas fotos guardadas en un directorio del proyecto, con el fin de que se pueda ver el registro que realizo de forma correcta.
 
-En donde implemente JavaScript?:
-En la seccion ADOPCION, todas las tarjetas que se ven de los perros las esta leyendo de un array de objetos, asi mismo si le hacen click a una tarjeta te lleva a la pagina donde puedes ver todos los datos de la tarjeta
-en cuestion y usar el boton de quiero adoptar para pedir una solicitud de adopcion al refugio.
+Funcionalidades:
+Se pueden Registrar como usuario, una vez registrado ya puedes regitrar un refugio o un perro para dar en adopcion, estos apareceran en las secciones de refugios o perros
+dependiendo cual sea.
 
-En la seccion Quiero Ayudar encontramos todos los refugios que estan dados de altas para recibir donaciones, estos tambien son tomados de un array y tienen la funcion de poder pedir una solicitud de visita o una solicitud 
-para realizar donaciones a ese refugio.
+Donaciones:
+Desde la seccion de quiero ayudar entrando a la tarjeta de algun refugio, se pueden realizar 3 tipos de donaciones diferentes, Alimentos, Medicamentos, y o Dinero.
 
-La seccion registrar esta funcionando registrando todos los datos que el usuario ingrese.
-La seccion registrar refugio esta funcionando pero aun no pude terminar de hacer que registre el refugio en un array o en el localstorage para que lo muestre como tarjeta en la seccion de refugios.
+Adopcion:
+Desde el menu de adopcion encuentran la lista de perros en adopcion y dentro de la tarjeta correspondiente a cada perro pueden solicitar la adopcion.
 
-Si registran el usuario y hacen login esta funcionando el sistema de sesiones(super precario).
-
-Que me falta realizar?
-Menu para que una vez que estes registrado como usuario, luego de haber registrado tu refugio puedas registrar los perros que tienes en adopcion en el regufio para que de esta manera aparezan en las tarjetas de perros en adopcion.
-Menu para editar los datos del usuario, refugio, y perros.

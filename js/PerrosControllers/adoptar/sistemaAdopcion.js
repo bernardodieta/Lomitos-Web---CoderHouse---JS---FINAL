@@ -10,8 +10,7 @@ function adoptarr() {
       modal.style.display = "block";
     });
     span.addEventListener("click", function () {
-      modal.style.display = "none";
-      //location.href = '../pages/refugiocard.html';
+      modal.style.display = "none";     
     });
     window.addEventListener("click", function (event) {
       if (event.target == modal) {
@@ -22,7 +21,7 @@ function adoptarr() {
   } else {
     Swal.fire({
       icon: 'error',
-      title: 'Debes ingresar con tu usuario antes de realizar alguna donacion',
+      title: 'Debes ingresar con tu usuario',
       text: 'Ingresa con tu Usuario',
       footer: '<a href="../pages/login.html">Ingresa con tu Usuario:</a>'
     })
@@ -56,7 +55,7 @@ const adoptarPerro = () => {
 }
 const cerrarVentana = () => {
   modal.style.display = "none";
-  location.href = '../pages/refugiocard.html';
+  location.href = '../pages/adopcioncard.html';
 }
 
 
