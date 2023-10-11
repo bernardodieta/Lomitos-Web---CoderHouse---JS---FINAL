@@ -1,7 +1,7 @@
 const btn = document.getElementById('submit');
 btn.addEventListener('click', function (e) {
   let stat = false;
-  let username = document.getElementById('username').value;
+ 
   let password = document.getElementById('password').value;
   let tempstorlist = []
   e.preventDefault();

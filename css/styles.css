@@ -2430,11 +2430,6 @@ body {
   padding-bottom: 20px;
 }
 
-h2 {
-  text-align: center;
-  padding: 40px 20px;
-}
-
 .form__content {
   display: flex;
   flex-direction: column;

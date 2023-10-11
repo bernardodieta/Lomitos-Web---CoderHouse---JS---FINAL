@@ -1,42 +1,83 @@
+let islogin = JSON.parse(sessionStorage.getItem('status'))
+function adoptarr() {
+  if (islogin === true) {
+    let btnadoptar = document.getElementById('btn-adoptar');   
+    let modal = document.getElementById("ventanaModal");
+    let boton = document.getElementById("abrirModal");
+    let span = document.getElementsByClassName("cerrar")[0];
 
-datosSS = JSON.parse(sessionStorage.getItem('iddog'));
-let buscar = dogCard.find(dog => dog.id === datosSS)
-let btnadoptar = document.querySelector('#btn-adoptar');
+    btnadoptar.addEventListener("click", function () {
+      modal.style.display = "block";
+    });
+    span.addEventListener("click", function () {
+      modal.style.display = "none";
+      //location.href = '../pages/refugiocard.html';
+    });
+    window.addEventListener("click", function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
 
-btnadoptar.addEventListener("click", function () {
-    console.log('click');
-    const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-          confirmButton: 'btn btn-success',
-          cancelButton: 'btn btn-danger'
-        },
-        buttonsStyling: false
-      })
-      
-      swalWithBootstrapButtons.fire({
-        title: 'Estas a un paso de enviar tu solicitud de adopción!!',
-        text: "Un representante del refugio se pondra en contacto para llevar a cabo la adopción!",
-        icon: 'success',
-        showCancelButton: true,
-        confirmButtonText: 'Enviar Solicitud',
-        cancelButtonText: 'Cancelar',
-        reverseButtons: true
-      }).then((result) => {
-        if (result.isConfirmed) {
-          swalWithBootstrapButtons.fire(
-            `Tu solicitud para adoptar a: ${buscar.nombre}, fue enviada correctamente.`,            
-            'Muy Pronto se comunicaran al celular registrado.',
-            'success'
+      }
+    });
+  } else {
+    Swal.fire({
+      icon: 'error',
+      title: 'Debes ingresar con tu usuario antes de realizar alguna donacion',
+      text: 'Ingresa con tu Usuario',
+      footer: '<a href="../pages/login.html">Ingresa con tu Usuario:</a>'
+    })
+
+  }
+}
+
+const adoptarPerro = () => {
+  if (islogin === true) {
+    let btnsDonaciones = document.getElementById('btn_donaciones');
+    let contenidoDonaciones = document.getElementById('contenido_donaciones');
+    btnsDonaciones.style.display = "none";
+    contenidoDonaciones.innerHTML = `
+      <form action="#" method="post" class="formulario_alimentos">    
+      <label for="tarjeta">Ingrese un numero de celular para poder comunicarnos a la brevedad.</label>
+      <input type="text" class="inputtext" id="tel">
+      <label for="tarjeta">En caso de tener un mail diferente al registrado por favor ingresarlo:</label>
+      <input type="text" class="inputtext" id="tel">
+      <input type="button" value="Cancelar" class="btn" onclick="cerrarVentana()">
+      <input type="button" value="Enviar" class="btn" onclick="confirmacion()">
+  </form>`
+  } else {
+    Swal.fire({
+      icon: 'error',
+      title: 'Debes ingresar con tu usuario antes de realizar esta acción',
+      text: 'Ingresa con tu Usuario',
+      footer: '<a href="../pages/login.html">Ingresa con tu Usuario:</a>'
+    })
+  }
+
+}
+const cerrarVentana = () => {
+  modal.style.display = "none";
+  location.href = '../pages/refugiocard.html';
+}
+
+
+function confirmacion() {
+  Swal.fire({
+      title: '¿Esta seguro que desa continuar con la adopción?',
+      text: "puedes continuar en otro momento si no estas seguro.",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si quiero adoptarlo'
+  }).then((result) => {
+      if (result.isConfirmed) {
+          Swal.fire(
+              'Muchas gracias por adoptar, muy pronto se comunicaran al telefono otorgado para darte indicaciones de como continuar',
           )
-        } else if (
-         
-          result.dismiss === Swal.DismissReason.cancel
-        ) {
-          swalWithBootstrapButtons.fire(
-            'Tu solicitud fue cancelada.',
-            'Lamentamos que te hayas arrepentido.',
-            'error'
-          )
-        }
-      })
-})
+          setTimeout(() => {
+              location.href = '../pages/index.html'
+          }, "3000");
+
+      }
+  })
+}

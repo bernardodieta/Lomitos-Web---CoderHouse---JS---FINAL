@@ -31,7 +31,7 @@ const mostrarPerro = (arrayUnion) => {
                         <h1>Adopta un canino para toda la vida</h1>
 
                         <div class="adopcion__galeria">
-                            <img src="${buscar.imagen1}" alt="Imagen de perro en adopcion">
+                            <img src="${buscar.imagen2}" alt="Imagen de perro en adopcion">
                             <img src="${buscar.imagen2}" alt="Imagen de perro en adopcion">
                             <img src="${buscar.imagen3}" alt="Imagen de perro en adopcion">
                         </div>
@@ -40,22 +40,20 @@ const mostrarPerro = (arrayUnion) => {
 
                             <div class="adopcion__description-box">
                                 <div class="category">${buscar.category}</div>
-                                <h2>${buscar.nombre}</h2>
-                                <h3>${buscar.edad}</h4>
-                                <h3>${buscar.tamaño}</h4>
-                                <h3>${buscar.sexo}</h4>
+                                <h2><span>${buscar.nombre}</span></h2>
+                                <h3>${buscar.edad}</h3>
+                                <h3>${buscar.tamaño}</h3>
+                                <h3>${buscar.sexo}</h3>
                             </div>
                             <div class="adopcion__description-text">
                                 <p>${buscar.descripcionlarga}</p>
                             </div>
                         </div>
                         <div class="adopcion__btns">
-                            <div class="btn" id="btn-adoptar">
+                            <div class="btn" id="btn-adoptar" onclick="adoptarr()">
                                 <h4>Quiero Adoptarte</h4>
                             </div>
-                            <div class="btn" id="btn-ayudar">
-                                <h4>Quiero Ayudarte</h4>
-                            </div>
+                            
                         </div>
                         <div class="adopcion__compromiso">
                             <ol>

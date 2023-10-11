@@ -9,6 +9,8 @@
         content="Perros en adopcion en la ciudad de mexico - apoyo economico o material a refugios de perros">
     <link rel="stylesheet" href="../css/styles.css">
     <script defer src="../funciones.js"></script>
+    <script src="../js/sweetAlert.js"></script>
+    <link rel="stylesheet" href="../css/sweetalert.css">
 
     <title>Lomitos Felices - Adopta un perro - Ayuda a un Refugio</title>
 </head>
@@ -95,6 +97,78 @@
                         </div>
 
                     </div>
+                    <div id="ventanaModal" class="modal">
+                        <div class="modal-content">
+                            <span class="cerrar">&times;</span>
+                            <h2>Menu de Adopción</h2>
+                            <div id="btn_donaciones">
+                                <h3>Nos pone muy Felices saber que quieres adoptar tu proximo compañero de vida</h3>
+                                <h4>Recuerda que adoptar un animal requiere un compromiso muy grande.</h4>
+                                <h4>Por favor Lee el compromiso completo antes de continuar.</h4>
+                                <div class="adopcion__compromiso">
+                                    <ol>
+                                        <li>
+                                            <span class="spanbold">Compromiso y responsabilidad:</span> Una familia que desee adoptar un
+                                            perro debe demostrar un
+                                            compromiso
+                                            sólido y una actitud responsable hacia el cuidado y bienestar del animal. Esto implica estar
+                                            dispuestos a dedicar tiempo, atención y recursos para satisfacer sus necesidades físicas y
+                                            emocionales.
+                                        </li>
+                                        <li>
+                                            <span class="spanbold">Estabilidad y espacio adecuado:</span> Es importante que la familia
+                                            tenga un entorno estable y seguro
+                                            para
+                                            el perro. Esto incluye disponer de espacio suficiente en el hogar para que el perro se mueva
+                                            cómodamente, así como un patio o área externa adecuada para que pueda hacer ejercicio y
+                                            realizar
+                                            sus
+                                            necesidades.
+                                        </li>
+                                        <li>
+                                            <span class="spanbold">Condiciones de vida adecuadas:</span> La familia debe poder
+                                            proporcionar un ambiente adecuado para el
+                                            perro, lo cual implica contar con condiciones de vida apropiadas. Esto incluye mantener la
+                                            vivienda
+                                            limpia, tener un lugar designado para el perro dentro de la casa, y garantizar que el
+                                            entorno
+                                            sea
+                                            seguro y libre de peligros para el animal.
+                                        </li>
+                                        <li>
+                                            <span class="spanbold">Experiencia previa o disposición para aprender:</span> Algunas
+                                            organizaciones pueden preferir que las
+                                            familias tengan experiencia previa en la tenencia responsable de perros, pero también están
+                                            dispuestas a trabajar con familias primerizas que estén dispuestas a aprender y recibir
+                                            orientación
+                                            sobre el cuidado de un perro.
+                                        </li>
+                                        <li>
+                                            <span class="spanbold">Aprobación de la organización de adopción:</span> Por último, es
+                                            importante que la familia pase por un
+                                            proceso de evaluación y aprobación por parte de la organización de adopción. Esto puede
+                                            incluir
+                                            completar una solicitud de adopción, proporcionar referencias, someterse a una visita al
+                                            hogar y
+                                            posiblemente realizar una entrevista personal. El objetivo de este proceso es asegurarse de
+                                            que
+                                            la
+                                            familia sea adecuada para el perro en términos de sus necesidades, estilo de vida y
+                                            capacidad
+                                            para
+                                            proporcionarle un hogar amoroso.
+                                        </li>
+        
+                                    </ol>
+                                </div>
+                                <button class="btn" name="dinero" onclick="adoptarPerro()">Continuar</button>
+                            </div>
+                            <div id="contenido_donaciones">
+        
+                            </div>
+                        </div>
+                    </div>
+                  
                     <div class="refugios__box">
 
 
@@ -174,11 +248,13 @@
             Copyright © 2023 Lomitos Felices, Todos los derechos reservados.
         </div>
     </footer>
-    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
+    
     <script src="../js/Login/classeUsuario.js"></script>
     <script src="../js/Login/autenticación.js"></script>
     <script src="../js/Login/usermenu.js"></script>
+    <script src="../js/PerrosControllers/adoptar/sistemaAdopcion.js"></script>
     <script src="../js/PerrosControllers/ListarSoloPerro.js"></script>
+   
 
 
 
