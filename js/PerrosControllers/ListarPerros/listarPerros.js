@@ -17,7 +17,7 @@ async function traerPerrosJson() {
 const mostrarPerros = (data) => {
   let listadePerros = []
 
-  let listaPerrosSessionS = JSON.parse(sessionStorage.getItem('ListaDePerros'))
+  let listaPerrosSessionS = JSON.parse(sessionStorage.getItem('ListaDePerros')) || []
   
   for(const nuevo of listaPerrosSessionS){
     listadePerros.push(new Dogcard(nuevo))

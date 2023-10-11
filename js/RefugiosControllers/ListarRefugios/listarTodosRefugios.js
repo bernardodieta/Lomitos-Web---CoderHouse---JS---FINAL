@@ -17,7 +17,7 @@ async function traerRefugioJson() {
   const mostrarRefugio = (data) => {
     let listadeRefugios = []
   
-    let listaRefugiosSessionS = JSON.parse(sessionStorage.getItem('Lista de Refugios'))
+    let listaRefugiosSessionS = JSON.parse(sessionStorage.getItem('Lista de Refugios')) || []
     
     for(const nuevo of listaRefugiosSessionS){
         listadeRefugios.push(new Refugio(nuevo))

@@ -11,9 +11,7 @@ class Usuario {
         this.vetdog = user.vetdog;
         this.username = user.username;
         this.password = user.password;
-
     }
-
 }
 
 class Logins {
