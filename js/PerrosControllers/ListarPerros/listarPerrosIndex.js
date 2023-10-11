@@ -30,7 +30,7 @@ const mostrarPerros = (data) => {
         nuevoDiv.className = "menuadopcion__cards-card";
         nuevoDiv.id = "menuadopcion__cards-card";
         nuevoDiv.innerHTML = `
-      <img src="${perro.imagen}" alt="Foto de Perro en adopcion">
+      <img src="${perro.imagen1}" alt="Foto de Perro en adopcion">
       <div class="category">${perro.category}</div>
       <div class="headercard">
       <h3>${perro.nombre}</h3>

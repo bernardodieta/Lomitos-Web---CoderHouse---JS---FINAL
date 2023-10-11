@@ -1,21 +1,35 @@
 
-const listarRefugios = () => {
-    const divContenedor = document.getElementById('refugiomenu__cards');
-    divContenedor.innerHTML = "";
-    listaTemporal = [];
-    const listaRefugios = arrayRefugios;
-    const refugiosSession = JSON.parse(sessionStorage.getItem('Lista de Refugios'))
-    const arrayUnion = [...listaRefugios,...(Array.isArray(refugiosSession) ? refugiosSession : [])];
-    for (const refugios of arrayUnion) {
-        if (!refugios) {
-            console.log('no se encontro ningun dato')
-        } else {
-            listaTemporal.push(new Refugio(refugios));
-            
-        }
+async function traerRefugioJson() {
+    try {
+      const respuesta = await fetch('../js/RefugiosControllers/ListarRefugios/arrayRefugios.json');
+  
+      if (!respuesta.ok) {
+        throw new Error("No se pudo cargar el archivo JSON");
+      } else {
+        const data = await respuesta.json();
+        mostrarRefugio(data)
+      }
+    } catch (error) {
+      console.error("Error:", error);
     }
-    for (const refugio of listaTemporal) {
-        const nuevoDiv = document.createElement('div');
+  }
+  
+  const mostrarRefugio = (data) => {
+    let listadeRefugios = []
+  
+    let listaRefugiosSessionS = JSON.parse(sessionStorage.getItem('Lista de Refugios'))
+    
+    for(const nuevo of listaRefugiosSessionS){
+        listadeRefugios.push(new Refugio(nuevo))
+    }
+   
+    let divContenedor = document.querySelector('#refugiomenu__cards');
+    divContenedor.innerHTML = ``;
+    for (const refugios of data) {
+        listadeRefugios.push(new Refugio(refugios))
+    }
+    for (const refugio of listadeRefugios) {
+        let nuevoDiv = document.createElement('div');
         nuevoDiv.classList = "refugiomenu__cards-card";
         nuevoDiv.innerHTML = `
         <div class="category">${refugio.category}</div>
@@ -31,6 +45,7 @@ const listarRefugios = () => {
             </div>
         </a>
         `;
+  
         const ayudaButton = nuevoDiv.querySelector('.btn__refu');
         ayudaButton.addEventListener('click', () => {
             JSON.stringify(sessionStorage.setItem('idrefu', refugio.id));
@@ -38,5 +53,7 @@ const listarRefugios = () => {
 
         divContenedor.appendChild(nuevoDiv);
     }
-}
-listarRefugios();
+  }
+  
+  
+  traerRefugioJson();

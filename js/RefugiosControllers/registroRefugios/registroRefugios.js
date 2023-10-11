@@ -1,11 +1,8 @@
-// Obtener el formulario por su ID
 const formulario = document.getElementById('submit');
+let listaRefugios = []
+formulario.addEventListener('click', function (e) {
+  e.preventDefault(); 
 
-// Agregar un evento de escucha para el envío del formulario
-formulario.addEventListener('submit', function (e) {
-  e.preventDefault(); // Evitar que se envíe el formulario de forma predeterminada
-
-  // Obtener los valores de los campos del formulario
   const nombre = document.getElementById('nombre').value;
   const apellido = document.getElementById('apellido').value;
   const email = document.getElementById('email').value;
@@ -24,8 +21,8 @@ formulario.addEventListener('submit', function (e) {
   const bankc = document.getElementById('bankc').value;
   const titularcuenta = document.getElementById('titularcuenta').value;
 
-  // Crear un objeto con los datos del formulario
   const datosFormulario = {
+    id: Math.floor(Math.random()*100),
     nombre,
     apellido,
     email,
@@ -53,7 +50,9 @@ formulario.addEventListener('submit', function (e) {
     descripcion: "El Refugio de Animales Felices es un lugar dedicado al cuidado y protección de animales abandonados. Nuestra misión es brindarles un hogar seguro y amoroso hasta que encuentren un hogar permanente. Contamos con un equipo de voluntarios comprometidos y un experimentado equipo veterinario que garantiza el bienestar de nuestros residentes. ¡Únete a nosotros en nuestra misión de darles una segunda oportunidad a estos adorables amigos peludos!"
   };
 
-  const datosJSON = JSON.stringify(datosFormulario);
-  sessionStorage.setItem('Lista de Refugios', datosJSON);
-  window.location.href = 'confirmacion.html';
+  listaRefugios = JSON.parse(sessionStorage.getItem('Lista de Refugios')) || [];
+  listaRefugios.push(datosFormulario);
+  sessionStorage.setItem('Lista de Refugios', JSON.stringify(listaRefugios));
+  window.location.href = '../pages/refugiomenu.html';
+
 });
